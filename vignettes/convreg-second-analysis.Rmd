@@ -1,0 +1,82 @@
+---
+title: "A convReg use (2)"
+author: "Adrien Ickowicz"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r set-options, echo=FALSE, cache=FALSE,warning=FALSE, message=FALSE}
+require(convReg)
+options(width = 120)
+knitr::opts_chunk$set(width = 120, fig.width=7, fig.height=4, warning=FALSE, message=FALSE)
+```
+
+# Example 2
+
+Let's first simulate some data.
+
+```{r}
+data("PatientAdmission")
+```
+
+We can plot the observations:
+
+```{r, echo=F}
+hist(PatientAdmission$LOS.total, breaks = seq(0, max(PatientAdmission$LOS.total)+1, by=0.25), xlim = c(0,20), xlab = "", ylab="", main="")
+```
+
+and an overview of the raw data:
+ 
+```{r, echo=FALSE, results='asis'}
+knitr::kable(head(PatientAdmission, 5))
+```
+
+```{r, echo = FALSE}
+testRes = testdist(PatientAdmission$LOS.total)
+print(testRes)
+```
+Let's run the convReg package with the true predictors.
+
+```{r, cache = F}
+idx.pred = c(2,9)
+dist1 = "ZIP"
+dist2 = "Gauss"
+res= BICselect(df = PatientAdmission[sample(1:nrow(PatientAdmission),100),], formula.resp = ~ LOS.total, idx.pred = idx.pred, dist1 = dist1, dist2 = dist2, quiet = F, formulas = "all")
+head(res)
+
+
+cvRes = convreg(formula.resp = ~ LOS.total, formula.mu1 = as.formula(as.character(res$formula1[1])), 
+                formula.sigma1 = as.formula(as.character(res$formula11[1])), 
+                formula.mu2= as.formula(as.character(res$formula2[1])), method = "mle",  dist1 = "ZIP",
+                data = PatientAdmission, debug = F)
+```
+
+Which yields the following estimates:
+
+```{r, echo = F}
+summary(cvRes)
+```
+
+## Plotting capability
+
+The package comes with mutliple plotting capabilities. A simple residuals plot:
+
+```{r,fig.height=7}
+plot(cvRes)
+```
+
+```{r}
+distplot(cvRes, xlim = c(0,20), delta = 0.25)
+```
+
+```{r}
+cdfplot(cvRes)
+```
+
+```{r}
+regplot(cvRes)
+```
