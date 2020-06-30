@@ -1,3 +1,5 @@
 _site
 Gemfile.lock
-.Rproj.user/
+.Rproj.user
+.Rhistory
+.RData
