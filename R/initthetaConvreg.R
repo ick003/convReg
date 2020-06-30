@@ -26,7 +26,7 @@ if(debug){browser()}
 
    if(dist1=="Nbinom"){model.1 = glm.nb(eval(parse(text=paste("y.r~",formula.mu1[2],sep=""))),data=data)}
    if(dist1=="Pois"){model.1 = glm(eval(parse(text=paste("y.r~",formula.mu1[2],sep=""))),data=data, family = "poisson")}
-   if(dist1=="CoMPoisson"){model.1 = glm.comp(eval(parse(text=paste("y.r~",formula.mu1[2],sep=""))),data=data)}
+   if(dist1=="CoMPoisson"){model.1 = glm.cmp(eval(parse(text=paste("y.r~",formula.mu1[2],sep=""))),data=data)}
    if(dist1=="Binom"){model.1 = glm(eval(parse(text=paste("y.r/",fixed$value[which(fixed$name == "sigma 1: (Intercept)")],"~",formula.mu1[2],sep=""))),data=data, family = "quasibinomial")}
    if(dist1=="Multinom"){model.1 = multinom(eval(parse(text=paste("y.r~",formula.mu1[2],sep=""))),data=data)}
    if(dist1=="ZIP"){model.1 = zeroinfl(eval(parse(text=paste("y.r~",formula.mu1[2],"|",formula.sigma1[2],sep=""))),data=data)}

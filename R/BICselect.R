@@ -20,12 +20,12 @@
 #' x = rnorm(50,0,0.5)
 #' k= rnbinom(50,exp(x),0.5)
 #' y= data.frame(obs= k + e +x, f1 = x, f2 = k, f3 = 2*rnorm(n=50,mean=0,sd=0.05))
-#' formula.resp = ~obs
+#' form.r = ~obs
 #' df = y
 #' idx.pred = 2
 #' dist1 = "Nbinom"
 #' dist2 = "Gauss"
-#' res= BICselect(df = df, formula.resp = formula.resp, idx.pred = idx.pred, dist1 = dist1, dist2 = dist2)
+#' res= BICselect(df = df, formula.resp = form.r, idx.pred = idx.pred, dist1 = dist1, dist2 = dist2)
 #' head(res,10)
 BICselect = function(df, formula.resp, idx.pred, dist1, dist2, quiet = TRUE, formulas = "main", parallel = FALSE, interactions = FALSE, debug = FALSE, ...){
 

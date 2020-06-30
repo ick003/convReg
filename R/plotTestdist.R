@@ -10,10 +10,7 @@
 #' x = rnbinom(150,1,0.5)
 #' k=5 + x
 #' y= data.frame(obs=k + e , f1 = as.factor(x))
-#' resTest=testdist( y$obs,
-#'           formula.mu1 =~ 1,
-#'           formula.mu2 =~ f1,
-#'           data=y)
+#' resTest=testdist(y$obs)
 #' plotTestdist(resTest)
 plotTestdist <- function(testdist){
 

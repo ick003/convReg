@@ -5,7 +5,7 @@ Date: 2016-12-18
 Authors@R: person("Adrien", "Ickowicz", email = "adrien.ickowicz@csiro.au", role = c("aut", "cre"))
 Description: Estimation of convolutive mixture models.
 Depends:
-    R (>= 3.1.1), compiler, inline, lattice, nnet, pscl, data.table, 
+    R (>= 3.1.1), compiler, inline, lattice, nnet, pscl, data.table, COMPoissonReg,
     RcppArmadillo, numDeriv, doMC, doParallel, foreach, parallel, MASS
 License: GPL-2
 Encoding: UTF-8

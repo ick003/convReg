@@ -222,8 +222,8 @@ summary.convreg <- function(object,... ) {
 }
 
 #' @export
-print.convreg <- function(x, ...) {
-  obj = x
+print.convreg <- function(object, ...) {
+  obj = object
   cat("\nCall:\n")
   print(obj$call)
   cat("\nTheta_mu1:\n")
@@ -237,36 +237,36 @@ print.convreg <- function(x, ...) {
 }
 
 #' @export
-print.summary.convreg <- function(x, ... ) {
+print.summary.convreg <- function(object, ... ) {
   cat("--------------------------------------------\n")
   cat("Convolution Regression Results","\n")
-  cat(toupper(x$maximType), ", ", x$distr,"\n", sep="")
-  cat("Return code ", x$returnCode, ": ", x$returnMessage, "\n", sep="")
-  if(!is.null(x$estimate)) {
-    cat("Log-Likelihood:", x$loglik, "\n")
-    cat(x$NActivePar, " free parameters\n")
+  cat(toupper(object$maximType), ", ", object$distr,"\n", sep="")
+  cat("Return code ",object$returnCode, ": ", object$returnMessage, "\n", sep="")
+  if(!is.null(object$estimate)) {
+    cat("Log-Likelihood:", object$loglik, "\n")
+    cat(object$NActivePar, " free parameters\n")
     cat("\n")
-    cat(paste("Estimates: ",strsplit(x$distr,"/")[[1]][1] ,"\n"))
-    printCoefmat(x$estimate[c(x$indices[[1]],x$indices[[2]]),])
+    cat(paste("Estimates: ",strsplit(object$distr,"/")[[1]][1] ,"\n"))
+    printCoefmat(object$estimate[c(object$indices[[1]],object$indices[[2]]),])
     cat("\n")
-    cat(paste("Estimates: ",strsplit(x$distr,"/")[[1]][2] ,"\n"))
-    printCoefmat(x$estimate[c(x$indices[[3]],x$indices[[4]]),])
+    cat(paste("Estimates: ",strsplit(object$distr,"/")[[1]][2] ,"\n"))
+    printCoefmat(object$estimate[c(object$indices[[3]],object$indices[[4]]),])
 
   }
-  if(!is.null(x$constraints)) {
+  if(!is.null(object$constraints)) {
     cat("\nWarning: constrained likelihood estimation.",
         "Inference is probably wrong\n")
-    cat("Constrained optimization based on", x$constraints$type,
+    cat("Constrained optimization based on", object$constraints$type,
         "\n")
-    if(!is.null(x$constraints$code))
-      cat("Return code:", x$constraints$code, "\n")
+    if(!is.null(object$constraints$code))
+      cat("Return code:", object$constraints$code, "\n")
     # note: this is missing for 'constrOptim'
-    if(!is.null(x$constraints$message))
-      cat(x$constraints$message, "\n")
+    if(!is.null(object$constraints$message))
+      cat(object$constraints$message, "\n")
     # note: this is missing for 'constrOptim'
-    cat(x$constraints$outer.iterations,
+    cat(object$constraints$outer.iterations,
         " outer iterations, barrier value",
-        x$constraints$barrier.value, "\n")
+        object$constraints$barrier.value, "\n")
   }
   cat("--------------------------------------------\n")
 }
@@ -468,13 +468,13 @@ marginalReg <- function(obj, name.reg,bp, ...) {
 }
 
 #' @export
-print.testdist <- function(x, ...) {
+print.testdist <- function(object, ...) {
    cat("--------------------------------------------\n")
    cat("Convolution Regression Distribution Tests","\n")
-   cat("Assumed distribution: ", x$dist1," and ",x$dist2,"\n", sep="")
+   cat("Assumed distribution: ", object$dist1," and ",object$dist2,"\n", sep="")
    cat("Tests results \n")
    cat("\n")
-   printCoefmat(x$df, digits = 4, P.values = TRUE, has.Pvalue = TRUE)
+   printCoefmat(object$df, digits = 4, P.values = TRUE, has.Pvalue = TRUE)
    cat("\n")
 }
 

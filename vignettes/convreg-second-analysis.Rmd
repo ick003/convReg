@@ -4,7 +4,7 @@ author: "Adrien Ickowicz"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{A convReg use (2)}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -42,7 +42,7 @@ print(testRes)
 Let's run the convReg package with the true predictors.
 
 ```{r, cache = F}
-idx.pred = c(2,9)
+idx.pred = c(2)
 dist1 = "ZIP"
 dist2 = "Gauss"
 res= BICselect(df = PatientAdmission[sample(1:nrow(PatientAdmission),100),], formula.resp = ~ LOS.total, idx.pred = idx.pred, dist1 = dist1, dist2 = dist2, quiet = F, formulas = "all")

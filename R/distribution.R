@@ -88,11 +88,11 @@ dcom2 = function(x,lambda,nu){
 .dCoMPoissonLnorm <- function(x,mu,size,mug,sigmag,log=F){
 
    if(length(mu)==1){
-      res = dlnorm(matrix(kronecker(x,0:100,FUN="-"), ncol=101, byrow=T),mug,sigmag) %*% dcom(0:100,nu=size,lambda=mu)
+      res = dlnorm(matrix(kronecker(x,0:100,FUN="-"), ncol=101, byrow=T),mug,sigmag) %*% dcmp(0:100,nu=size,lambda=mu)
    }else{
       rd.p = 0:100
       yx = cbind(x,mu,size,mug,sigmag)
-      res = apply(yx,1,function(x) sum(dlnorm(x[1]-rd.p,x[4], x[5])*dcom(rd.p,nu=x[3],lambda = x[2])))
+      res = apply(yx,1,function(x) sum(dlnorm(x[1]-rd.p,x[4], x[5])*dcmp(rd.p,nu=x[3],lambda = x[2])))
       res = sapply(res,function(x) max(x,10^(-300)))
    }
    res[is.nan(res)] = 10^(-300)
@@ -104,10 +104,10 @@ dcom2 = function(x,lambda,nu){
 dTCoMPoissonGauss <- function(x,mu,size,mug,sigmag,k.max,f.k,j){
    rd.p = 0:k.max
    yx = cbind(x,mu,size,mug,sigmag)
-   if(j == 1){res = apply(yx,1,function(x) sum(dnorm(x[1]-rd.p,x[4], x[5])*dcom(rd.p,nu=x[3],lambda = x[2])*rd.p))}
-   if(j == 2){res = apply(yx,1,function(x) sum(dnorm(x[1]-rd.p,x[4], x[5])*dcom(rd.p,nu=x[3],lambda = x[2])*log(factorial(rd.p))))}
-   if(j ==3){res = apply(yx,1,function(x) sum(dnorm(x[1]-rd.p,x[4], x[5])*dcom(rd.p,nu=x[3],lambda = x[2])*(x[1]-rd.p)))}
-   if(j ==4){res = apply(yx,1,function(x) sum(dnorm(x[1]-rd.p,x[4], x[5])*dcom(rd.p,nu=x[3],lambda = x[2])*(x[1]-rd.p)^2))}
+   if(j == 1){res = apply(yx,1,function(x) sum(dnorm(x[1]-rd.p,x[4], x[5])*dcmp(rd.p,nu=x[3],lambda = x[2])*rd.p))}
+   if(j == 2){res = apply(yx,1,function(x) sum(dnorm(x[1]-rd.p,x[4], x[5])*dcmp(rd.p,nu=x[3],lambda = x[2])*log(factorial(rd.p))))}
+   if(j ==3){res = apply(yx,1,function(x) sum(dnorm(x[1]-rd.p,x[4], x[5])*dcmp(rd.p,nu=x[3],lambda = x[2])*(x[1]-rd.p)))}
+   if(j ==4){res = apply(yx,1,function(x) sum(dnorm(x[1]-rd.p,x[4], x[5])*dcmp(rd.p,nu=x[3],lambda = x[2])*(x[1]-rd.p)^2))}
 
    res1 = sapply(res,function(x) max(x,10^(-300)))
    res1[which(is.nan(res1))]=10^(100)
@@ -160,7 +160,7 @@ dTCoMPoissonGauss <- function(x,mu,size,mug,sigmag,k.max,f.k,j){
 
 .dCoMPoissonGauss <- function(x,mu,size,mug,sigmag,log=F){
    if(length(mu)==1){
-      res = dnorm(matrix(kronecker(x,0:100,FUN="-"), ncol=101, byrow=T),mug,sigmag) %*% dcom(0:100,nu=size,lambda=mu)
+      res = dnorm(matrix(kronecker(x,0:100,FUN="-"), ncol=101, byrow=T),mug,sigmag) %*% dcmp(0:100,nu=size,lambda=mu)
    }else{
       res = rep(0,length(x))
       for(i in 1:length(x)){
@@ -332,9 +332,9 @@ qNbinomGauss <- function(p,mu,size,mug,sigmag){
 #' @export
 rCoMPoissonGauss <- function(N,mu,size,mug,sigmag){
    if(length(mu)==1){
-      rnb.sim = rcom(N,nu=size,lambda=mu)
+      rnb.sim = rcmp(N,nu=size,lambda=mu)
    }else{
-      rnb.sim = apply(cbind(mu,size), 1, function(x) rcomp(N/length(mu),lam = x[1],nu=x[2]))
+      rnb.sim = apply(cbind(mu,size), 1, function(x) rcmp(N/length(mu),lambda = x[1],nu=x[2]))
    }
    LOS.sim = c(t(rnb.sim)) + rnorm(N,mug,sigmag)
 
@@ -733,9 +733,9 @@ qNbinomLnorm <- function(p,mu,size,mug,sigmag){
 #' @export
 rCoMPoissonLnorm <- function(N,mu,size,mug,sigmag){
    if(length(mu)==1){
-      rnb.sim = rcomp(N,nu=size,lam=mu)
+      rnb.sim = rcmp(N,nu=size,lambda=mu)
    }else{
-      rnb.sim = apply(cbind(mu,size), 1, function(x) rcomp(N/length(mu),lam = x[1],nu=x[2]))
+      rnb.sim = apply(cbind(mu,size), 1, function(x) rcmp(N/length(mu),lambda = x[1],nu=x[2]))
    }
    LOS.sim = c(t(rnb.sim)) + rlnorm(N,mug,sigmag)
 
@@ -1075,9 +1075,9 @@ qNbinomGamma <- function(p,mu,size,mug,sigmag){
 #' @export
 rCoMPoissonGamma <- function(N,mu,size,mug,sigmag){
    if(length(mu)==1){
-      rnb.sim = rcomp(N,nu=size,lam=mu)
+      rnb.sim = rcmp(N,nu=size,lambda=mu)
    }else{
-      rnb.sim = apply(cbind(mu,size), 1, function(x) rcomp(N/length(mu),lam = x[1],nu=x[2]))
+      rnb.sim = apply(cbind(mu,size), 1, function(x) rcmp(N/length(mu),lambda = x[1],nu=x[2]))
    }
    LOS.sim = c(t(rnb.sim)) + rgamma(N,mug,sigmag)
 
@@ -1099,7 +1099,7 @@ pCoMPoissonGamma <- function(q,mu,size,mug,sigmag){
    rd.p = 0:200
    if(length(q)==1){
       x=seq(0,q,0.1)
-      res = lapply(x,function(x) sum(dgamma(x-rd.p,mug, sigmag)*dcom(rd.p,nu=size,lambda = mu)))
+      res = lapply(x,function(x) sum(dgamma(x-rd.p,mug, sigmag)*dcmp(rd.p,nu=size,lambda = mu)))
       #res = sum(unlist(lapply(res,function(x) max(x,10^(-300))))*0.1)
       res = sum(sapply(res,function(x) max(x,10^(-300)))*0.1)
    }
@@ -1107,7 +1107,7 @@ pCoMPoissonGamma <- function(q,mu,size,mug,sigmag){
       res = NULL
       for(j in 1:length(q)){
          x=seq(0,q[j],0.1)
-         res.i = lapply(x,function(x) sum(dgamma(x-rd.p,mug,sigmag)*dcom(rd.p,nu=size,lambda = mu)))
+         res.i = lapply(x,function(x) sum(dgamma(x-rd.p,mug,sigmag)*dcmp(rd.p,nu=size,lambda = mu)))
          res.i = sum(unlist(lapply(res.i,function(x) max(x,10^(-300))))*0.1)
          res.i = sum(sapply(res.i,function(x) max(x,10^(-300)))*0.1)
          res = c(res,res.i)
