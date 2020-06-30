@@ -1,0 +1,458 @@
+[
+    {
+        "definitions" : [
+            {
+                "column" : 5,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 16,
+                "name" : "timesTwo(int)",
+                "parent_name" : "",
+                "usr" : "c:@F@timesTwo#I#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 21,
+                "name" : "indicator(double)",
+                "parent_name" : "",
+                "usr" : "c:@F@indicator#d#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 28,
+                "name" : "factorial(int)",
+                "parent_name" : "",
+                "usr" : "c:@F@factorial#I#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 36,
+                "name" : "W(double, double, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@W#d#d#I#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 48,
+                "name" : "Y(double, double, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@Y#d#d#I#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 60,
+                "name" : "YY(double, double, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@YY#d#d#I#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 72,
+                "name" : "Z(double, double, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@Z#d#d#I#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 85,
+                "name" : "Indicator(NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@Indicator#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 95,
+                "name" : "W(NumericVector, NumericVector, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@W#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#I#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 105,
+                "name" : "Y(NumericVector, NumericVector, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@Y#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#I#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 115,
+                "name" : "YY(NumericVector, NumericVector, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@YY#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#I#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 125,
+                "name" : "Z(NumericVector, NumericVector, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@Z#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#I#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 134,
+                "name" : "dcomp0(int, double, double, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@dcomp0#I#d#d#I#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 142,
+                "name" : "dzip0(int, double, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@dzip0#I#d#d#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 151,
+                "name" : "dtpois0(int, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@dtpois0#I#d#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 159,
+                "name" : "dhp0(int, double, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@dhp0#I#d#d#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 167,
+                "name" : "dcomp1(NumericVector, double, double, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@dcomp1#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#d#d#I#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 176,
+                "name" : "dhp1(NumericVector, double, double, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dhp1#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#d#d#b#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 193,
+                "name" : "dcompoissongauss(double, double, double, double, double)",
+                "parent_name" : "",
+                "usr" : "c:@F@dcompoissongauss#d#d#d#d#d#"
+            },
+            {
+                "column" : 8,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 201,
+                "name" : "dkcompoissongauss(double, double, double, double, double, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@dkcompoissongauss#d#d#d#d#d#I#"
+            },
+            {
+                "column" : 6,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 208,
+                "name" : "checkInputs(NumericVector, NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@checkInputs#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#"
+            },
+            {
+                "column" : 21,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 238,
+                "name" : "dZIP(NumericVector, NumericVector, NumericVector, int, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dZIP#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#I#b#"
+            },
+            {
+                "column" : 21,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 270,
+                "name" : "dHP(NumericVector, NumericVector, NumericVector, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dHP#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#b#"
+            },
+            {
+                "column" : 21,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 302,
+                "name" : "dcomp(NumericVector, NumericVector, NumericVector, int, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dcomp#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#I#b#"
+            },
+            {
+                "column" : 21,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 334,
+                "name" : "dtpois(NumericVector, NumericVector, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dtpois#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#b#"
+            },
+            {
+                "column" : 21,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 368,
+                "name" : "dBinomGauss(Rcpp::NumericVector, Rcpp::NumericVector, Rcpp::NumericVector, Rcpp::NumericVector, Rcpp::NumericVector, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dBinomGauss#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#b#"
+            },
+            {
+                "column" : 21,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 412,
+                "name" : "dBinomLnorm(Rcpp::NumericVector, Rcpp::NumericVector, Rcpp::NumericVector, Rcpp::NumericVector, Rcpp::NumericVector, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dBinomLnorm#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#b#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 456,
+                "name" : "dNbinomGauss(NumericVector, NumericVector, NumericVector, NumericVector, NumericVector, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dNbinomGauss#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#b#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 513,
+                "name" : "dZIPGauss(NumericVector, NumericVector, NumericVector, NumericVector, NumericVector, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dZIPGauss#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#b#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 571,
+                "name" : "dHPGauss(NumericVector, NumericVector, NumericVector, NumericVector, NumericVector, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dHPGauss#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#b#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 630,
+                "name" : "dNbinomLnorm(NumericVector, NumericVector, NumericVector, NumericVector, NumericVector, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dNbinomLnorm#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#b#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 686,
+                "name" : "dCoMPoissonGauss2(NumericVector, NumericVector, NumericVector, NumericVector, NumericVector, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dCoMPoissonGauss2#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#b#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 743,
+                "name" : "dPoisGauss(NumericVector, NumericVector, NumericVector, NumericVector, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dPoisGauss#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#b#"
+            },
+            {
+                "column" : 21,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 797,
+                "name" : "dPoisLnorm(Rcpp::NumericVector, Rcpp::NumericVector, Rcpp::NumericVector, Rcpp::NumericVector, bool)",
+                "parent_name" : "",
+                "usr" : "c:@F@dPoisLnorm#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#b#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 831,
+                "name" : "my_dnorm(NumericVector, NumericVector, NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@my_dnorm#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 839,
+                "name" : "dkNbinomGauss(NumericVector, NumericVector, NumericVector, NumericVector, NumericVector, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@dkNbinomGauss#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#I#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 884,
+                "name" : "dkNbinomLnorm(NumericVector, NumericVector, NumericVector, NumericVector, NumericVector, int)",
+                "parent_name" : "",
+                "usr" : "c:@F@dkNbinomLnorm#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#I#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 930,
+                "name" : "dkBinomGauss(NumericVector, NumericVector, NumericVector, NumericVector, NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@dkBinomGauss#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 978,
+                "name" : "dkPoisGauss(NumericVector, NumericVector, NumericVector, NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@dkPoisGauss#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 1025,
+                "name" : "dkBinomLnorm(NumericVector, NumericVector, NumericVector, NumericVector, NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@dkBinomLnorm#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#S0_#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+                "kind" : 6,
+                "line" : 1073,
+                "name" : "dkPoisLnorm(NumericVector, NumericVector, NumericVector, NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@dkPoisLnorm#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#S0_#S0_#"
+            }
+        ],
+        "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/cdistribution.cpp",
+        "file_last_write" : 1483912765
+    },
+    {
+        "definitions" : [
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/funoptim.cpp",
+                "kind" : 6,
+                "line" : 5,
+                "name" : "funoptim(NumericVector, NumericVector, CharacterVector, List, List, List, List, NumericVector, NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@funoptim#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#S0_#$@N@Rcpp@C@Vector>#VI16#@N@Rcpp@CT>1#T@PreserveStorage#$@N@Rcpp@C@Vector>#VI19#@N@Rcpp@CT>1#T@PreserveStorage#S2_#S2_#S2_#S0_#S0_#"
+            }
+        ],
+        "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/funoptim.cpp",
+        "file_last_write" : 1484002633
+    },
+    {
+        "definitions" : [
+            {
+                "column" : 6,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/rcpp_hello_world.cpp",
+                "kind" : 6,
+                "line" : 6,
+                "name" : "rcpp_hello_world",
+                "parent_name" : "",
+                "usr" : "c:@F@rcpp_hello_world#"
+            }
+        ],
+        "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/rcpp_hello_world.cpp",
+        "file_last_write" : 1420597778
+    },
+    {
+        "definitions" : [
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/transform.cpp",
+                "kind" : 6,
+                "line" : 11,
+                "name" : "f01(NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@f01#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/transform.cpp",
+                "kind" : 6,
+                "line" : 22,
+                "name" : "fpos(NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@fpos#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/transform.cpp",
+                "kind" : 6,
+                "line" : 29,
+                "name" : "fint(NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@fint#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/transform.cpp",
+                "kind" : 6,
+                "line" : 38,
+                "name" : "fid(NumericVector)",
+                "parent_name" : "",
+                "usr" : "c:@F@fid#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#"
+            },
+            {
+                "column" : 15,
+                "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/transform.cpp",
+                "kind" : 6,
+                "line" : 44,
+                "name" : "ftransform(NumericVector, std::string)",
+                "parent_name" : "",
+                "usr" : "c:@F@ftransform#$@N@Rcpp@C@Vector>#VI14#@N@Rcpp@CT>1#T@PreserveStorage#$@N@std@N@__1@C@basic_string>#C#$@N@std@N@__1@S@char_traits>#C#$@N@std@N@__1@C@allocator>#C#"
+            }
+        ],
+        "file" : "/home/ick003/Documents/Donnees/Code/Package/convReg/src/transform.cpp",
+        "file_last_write" : 1482110670
+    }
+]

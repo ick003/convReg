@@ -1,0 +1,9 @@
+"0","res.reg.em =convreg( ~obs,
+           formula.mu1 =~ f2,
+           formula.mu2 =~ f1,
+           data=y,
+           dist1 = ""Nbinom"",method = ""mle"")
+"
+"2","Error in .Call(""convReg_fpos"", PACKAGE = ""convReg"", x) : 
+  ""convReg_fpos"" not available for .Call() for package ""convReg""
+"

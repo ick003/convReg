@@ -1,0 +1,4 @@
+"0","regplot(cvRes)
+"
+"2","Error in full.X[1:nrow(range.var), ] : subscript out of bounds
+"

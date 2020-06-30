@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#' convReg : Package for convolutive mixture models.\n#'\n#' convReg allows you to infer convolutive mixture models.\n#' @useDynLib convReg\n#' @importFrom Rcpp sourceCpp\n#' @importFrom grDevices hcl rgb\n#' @importFrom graphics abline arrows axis filled.contour grid hist layout legend par plot plot.new points polygon text\n#' @importFrom utils combn\n#' @import CompGLM RcppArmadillo compiler compoisson data.table doMC doParallel foreach inline lattice nnet numDeriv parallel pscl stats MASS\n\"_PACKAGE\"\n",
+    "created" : 1484783314281.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2803649833",
+    "id" : "6E6F971D",
+    "lastKnownWriteTime" : 1483940609,
+    "last_content_update" : 1483940609,
+    "path" : "~/Documents/Donnees/Code/Package/convReg/R/convReg-package.R",
+    "project_path" : "R/convReg-package.R",
+    "properties" : {
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

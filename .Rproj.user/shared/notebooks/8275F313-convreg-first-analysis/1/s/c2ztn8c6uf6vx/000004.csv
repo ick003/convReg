@@ -1,0 +1,7 @@
+"0","res.reg.em =convreg( ~obs,
+           formula.mu1 =~ f2,
+           formula.mu2 =~ f1,
+           data=y,
+           dist1 = ""Nbinom"",method = ""mle"")
+"
+"2","NaNs produced"

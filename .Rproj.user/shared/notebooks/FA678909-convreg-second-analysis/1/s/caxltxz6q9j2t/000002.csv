@@ -1,0 +1,29 @@
+"0","cvRes = convreg(formula.resp = ~ CO2, formula.mu1 =~ bs(GNP), method = ""em"",
+                data = CO2data, dist1 = ""Binom"", fixed = fixed, scale=TRUE, scaleInit = 2/max(CO2data$CO2), debug = T)
+"
+"1","Called from: "
+"1","convreg(formula.resp = ~CO2, formula.mu1 = ~bs(GNP), method = ""em"", 
+"
+"1","    data = CO2data, dist1 = ""Binom"", fixed = fixed, scale = TRUE, 
+"
+"1","    scaleInit = 2/max(CO2data$CO2), debug = T)
+"
+"0","c"
+"1","Called from: "
+"1","convRegEM(paramList$formula.resp, paramList$formula.mu1, paramList$formula.sigma1, 
+"
+"1","    paramList$formula.mu2, paramList$formula.sigma2, dist1 = paramList$dist1, 
+"
+"1","    dist2 = paramList$dist2, df = paramList$data, theta.0 = theta0, 
+"
+"1","    X.mu1 = paramList$X.mu1, X.sigma1 = paramList$X.sigma1, X.mu2 = paramList$X.mu2, 
+"
+"1","    X.sigma2 = paramList$X.sigma2, fun1 = paramList$fun1, fun2 = paramList$fun2, 
+"
+"1","    fun3 = paramList$fun3, fun4 = paramList$fun4, weights = paramList$weights, 
+"
+"1","    quiet = paramList$quiet, debug = paramList$debug, scale = paramList$scale, 
+"
+"1","    scaleInit = paramList$scaleInit)
+"
+"0","c"

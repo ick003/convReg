@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# Tests #\nlibrary(convReg)\n##### Binom + Gauss #####\nn = 200\nset.seed(123)\nx1 = rnorm(n,3,0.5)\nx2 = runif(n,-2,1)\nk= rbinom(n,prob=exp(-exp(x2)),size=2)\ne=x1+rnorm(n=n,mean=0,sd=0.25)\ny= data.frame(obs=(k + e) , f1 = x1, f2 = x2)\npar(mfrow = c(1,1), mar = c(5,4,4,2))\nhist(y$obs, breaks = seq(min(y$obs)-1, max(y$obs)+1, length.out = n/20), xlim = c(min(y$obs)-1, max(y$obs)+1))\ndist1 = \"Binom\";dist2 = \"Gauss\"\nfixed=list(name = \"sigma 1: (Intercept)\", value = 2)\nres.reg.em =convreg( ~obs,\n           formula.mu1 =~ f2,\n           formula.mu2 =~ f1,\n           fixed = fixed,\n           data=y,dist1 = dist1,\n           method = \"em\",\n           scale=T, scaleInit = max(y$obs)/2)\n\nbS = BICselect(df = y, formula.resp = ~obs, idx.pred = 2:3, dist1 = \"Binom\", dist2 = \"Gauss\")\n\ntd = testdist(y$obs, dist1 = \"Binom\", dist2 = \"Gauss\",fixed=list(name = \"sigma 1: (Intercept)\", value = 3),method = \"em\",\n              scale=T, scaleInit = max(y$obs)/3)\nplotTestdist(td)\n\ntd = testdist(y$obs, dist1 = \"Pois\", dist2 = \"Lnorm\")\nplotTestdist(td)\n\nsummary(res.reg.em)\nplot(res.reg.em)\nregplot(res.reg.em)\ndistplot(res.reg.em)\ncdfplot(res.reg.em)\n\n\n####\n\nx1 = rnorm(n,3,0.5)\nx2 = runif(n,-2,1)\nk= rpois(n,exp(-exp(x2)))\ne=x1+rlnorm(n=n,mean=0,sd=0.25)\ny= data.frame(obs=(k + e) , f1 = x1, f2 = x2)\npar(mfrow = c(1,1), mar = c(5,4,4,2))\nhist(y$obs, breaks = seq(min(y$obs)-1, max(y$obs)+1, length.out = n/5), xlim = c(min(y$obs)-1, max(y$obs)+1))\ndist1 = \"Pois\";dist2 = \"Lnorm\"\nres.reg.em =convreg( ~obs,\n                     formula.mu1 =~ f2,\n                     formula.mu2 =~ f1,\n                     data=y,\n                     dist1 = dist1,\n                     dist2 = dist2,\n                     method = \"mle\")\n\nbS = BICselect(df = y, formula.resp = ~obs, idx.pred = 2:3, dist1 = dist1, dist2 = dist2)\n\ntd = testdist(y$obs, dist1 = dist1, dist2 = dist2)\nplotTestdist(td)\n\ntd = testdist(y$obs, dist1 = dist1, dist2 = \"Gauss\")\nplotTestdist(td)\n\nsummary(res.reg.em)\nplot(res.reg.em)\nregplot(res.reg.em)\ndistplot(res.reg.em)\ncdfplot(res.reg.em)\n\n",
+    "created" : 1484258116243.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1243764921",
+    "id" : "ABE2DEA3",
+    "lastKnownWriteTime" : 1484710470,
+    "last_content_update" : 1484710470421,
+    "path" : "~/Documents/Donnees/Code/Package/convReg/tests/Test.R",
+    "project_path" : "tests/Test.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

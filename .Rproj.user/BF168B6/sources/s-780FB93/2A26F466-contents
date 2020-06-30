@@ -1,0 +1,77 @@
+---
+title: "A convReg use"
+author: "Adrien Ickowicz"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{A convReg use}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r set-options, echo=FALSE, cache=FALSE,warning=FALSE, message=FALSE}
+require(convReg)
+options(width = 120)
+knitr::opts_chunk$set(width = 120, fig.width=7, fig.height=4, warning=FALSE, message=FALSE)
+```
+
+# Example 1
+
+Let's first simulate some data.
+
+```{r}
+set.seed(123)
+e=0.75+rnorm(n=500,mean=0,sd=0.25)
+x1 = rnorm(500,0,0.5)
+x2 = runif(500,-2,1)
+k= rnbinom(500,mu=exp(x2),size=1.5)
+y= data.frame(obs=(k + e) , f1 = x1, f2 = x2)
+```
+
+We can plot the observations' histogram:
+
+```{r, echo=F}
+hist(y$obs, breaks = seq(min(y$obs)-1.5/24, max(y$obs)+3/24, 3/24), xlim = c(0,14))
+```
+
+and an overview of the raw data:
+ 
+```{r, echo=FALSE, results='asis'}
+knitr::kable(head(y, 5))
+```
+
+Let's run the convReg package with the true predictors.
+
+```{r, cache = F}
+res.reg.em =convreg( ~obs,
+           formula.mu1 =~ f2,
+           formula.mu2 =~ f1,
+           data=y,
+           dist1 = "Nbinom",method = "mle")
+```
+
+Which yields the following estimates:
+
+```{r, echo = F}
+summary(res.reg.em)
+```
+
+## Plotting capability
+
+The package comes with mutliple plotting capabilities. A simple residuals plot:
+
+```{r,fig.height=7}
+plot(res.reg.em)
+```
+
+```{r}
+distplot(res.reg.em)
+```
+
+```{r}
+cdfplot(res.reg.em)
+```
+
+```{r}
+regplot(res.reg.em)
+```

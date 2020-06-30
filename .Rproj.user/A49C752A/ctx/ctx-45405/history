@@ -1,0 +1,8 @@
+library(convReg)
+library(convReg)
+packrat::init()
+install.packages("roxygen2")
+library("roxygen2", lib.loc="~/Documents/Donnees/Code/Package/convReg/packrat/lib/x86_64-pc-linux-gnu/3.3.2")
+install.packages("testthat")
+packrat::disable()
+install.packages("roxygen2")

@@ -1,0 +1,23 @@
+"0","cvRes = convreg(formula.resp = ~ LOS.total, formula.mu1 = as.formula(as.character(res$formula1[1])), 
+                formula.sigma1 = as.formula(as.character(res$formula11[1])), 
+                formula.mu2= as.formula(as.character(res$formula2[1])), method = ""em"",  data = PatientAdmission, 
+                debug = TRUE)
+"
+"1","Called from: "
+"1","convreg(formula.resp = ~LOS.total, formula.mu1 = as.formula(as.character(res$formula1[1])), 
+"
+"1","    formula.sigma1 = as.formula(as.character(res$formula11[1])), 
+"
+"1","    formula.mu2 = as.formula(as.character(res$formula2[1])), 
+"
+"1","    method = ""em"", data = PatientAdmission, debug = TRUE)
+"
+"0","c"
+"1","Called from: "
+"1","init.theta.convreg(y, dist1, dist2, formula.mu1, formula.sigma1, 
+"
+"1","    formula.mu2, formula.sigma2, fixed, data, theta.name, scale, 
+"
+"1","    scaleInit, debug)
+"
+"0","Q"

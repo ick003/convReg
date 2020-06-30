@@ -1,0 +1,5 @@
+"0","distplot(cvRes)
+"
+"2","Error in rbinom(nrow(X.mu1) * 1000, mu = mu1[idx.boot], size = sigma1[idx.boot]) : 
+  unused argument (mu = mu1[idx.boot])
+"

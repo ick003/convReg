@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"A convReg use (2)\"\nauthor: \"Adrien Ickowicz\"\ndate: \"`r Sys.Date()`\"\noutput: rmarkdown::html_vignette\nvignette: >\n  %\\VignetteIndexEntry{Vignette Title}\n  %\\VignetteEngine{knitr::rmarkdown}\n  %\\VignetteEncoding{UTF-8}\n---\n\n```{r set-options, echo=FALSE, cache=FALSE,warning=FALSE, message=FALSE}\nrequire(convReg)\noptions(width = 120)\nknitr::opts_chunk$set(width = 120, fig.width=7, fig.height=4, warning=FALSE, message=FALSE)\n```\n\n# Example 2\n\nLet's first simulate some data.\n\n```{r}\ndata(\"PatientAdmission\")\n```\n\nWe can plot the observations:\n\n```{r, echo=F}\nhist(PatientAdmission$LOS.total, breaks = seq(0, max(PatientAdmission$LOS.total)+1, by=0.25), xlim = c(0,20), xlab = \"\", ylab=\"\", main=\"\")\n```\n\nand an overview of the raw data:\n \n```{r, echo=FALSE, results='asis'}\nknitr::kable(head(PatientAdmission, 5))\n```\n\n```{r, echo = FALSE}\ntestRes = testdist(PatientAdmission$LOS.total)\nprint(testRes)\n```\nLet's run the convReg package with the true predictors.\n\n```{r, cache = F}\nidx.pred = c(2,9)\ndist1 = \"ZIP\"\ndist2 = \"Gauss\"\nres= BICselect(df = PatientAdmission[sample(1:nrow(PatientAdmission),100),], formula.resp = ~ LOS.total, idx.pred = idx.pred, dist1 = dist1, dist2 = dist2, quiet = F, formulas = \"all\")\nhead(res)\n\n\ncvRes = convreg(formula.resp = ~ LOS.total, formula.mu1 = as.formula(as.character(res$formula1[1])), \n                formula.sigma1 = as.formula(as.character(res$formula11[1])), \n                formula.mu2= as.formula(as.character(res$formula2[1])), method = \"mle\",  dist1 = \"ZIP\",\n                data = PatientAdmission, debug = F)\n```\n\nWhich yields the following estimates:\n\n```{r, echo = F}\nsummary(cvRes)\n```\n\n## Plotting capability\n\nThe package comes with mutliple plotting capabilities. A simple residuals plot:\n\n```{r,fig.height=7}\nplot(cvRes)\n```\n\n```{r}\ndistplot(cvRes, xlim = c(0,20), delta = 0.25)\n```\n\n```{r}\ncdfplot(cvRes)\n```\n\n```{r}\nregplot(cvRes)\n```\n",
+    "created" : 1484003209047.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2296040727",
+    "id" : "44B81D0F",
+    "lastKnownWriteTime" : 1484630562,
+    "last_content_update" : 1484630562023,
+    "path" : "~/Documents/Donnees/Code/Package/convReg/vignettes/convreg-second-analysis.Rmd",
+    "project_path" : "vignettes/convreg-second-analysis.Rmd",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

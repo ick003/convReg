@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "#' Convolutive regression function testing\n#'\n#' Convolutive regression function testing\n#' @param y.obs observations vector\n#' @param dist1 chain of character to idnetify the distribution of variable1\n#' @param dist2 chain of character to idnetify the distribution of variable2\n#' @param ... additional parameters for convreg().\n#' @keywords convreg test\n#' @export\n#' @examples\n#' set.seed(123)\n#' e=rnorm(n=150,mean=0,sd=0.05)\n#' x = rbinom(150,1,0.5)\n#' k=5 + x\n#' y= data.frame(obs=k + e , f1 = as.factor(x))\n#' resTest=testdist(y$obs)\ntestdist <- function(y.obs, dist1 = \"Nbinom\", dist2 = \"Gauss\",...) {\n\n   n = length(y.obs)\n   if(n > 500){n = 500}\n   dat.temp = data.frame(obs = y.obs[sample(1:length(y.obs), n)])\n   cv = convreg(formula.resp = ~obs, dist1 = dist1, dist2 = dist2, data = dat.temp, ...)\n\n   #### Testing the chosen distribution ####\n\n   # Chi-2 continuous\n\n   res = y.obs\n   #res = round(res)\n   by.o = diff(range(res)) / (length(c(res))/20)\n   seq.o = seq(min(res)-by.o, max(res)+by.o, by=by.o)\n   O = sapply(seq.o, function(x) sum(res <= x))\n   O[2:length(seq.o)] = O[2:length(seq.o)] - O[1:(length(seq.o)-1)]\n   idx.O = which(O > 2)\n   O = O[idx.O]\n   x.o = seq.o[idx.O]\n   #E = ppois(seq.o,mean(res)) * length(res)\n   mu1 = cv$transform[[1]](coef(cv)$theta_mu1)\n   sigma1 = cv$transform[[2]](coef(cv)$theta_sigma1)\n   mu2 = cv$transform[[3]](coef(cv)$theta_mu2)\n   sigma2 = cv$transform[[4]](coef(cv)$theta_sigma2)\n   if(dist1 == \"Pois\"){\n     E =  eval(parse(text = sprintf(\"p%s%s(seq.o, mu1, mu2, sigma2)\", dist1, dist2)))\n   }else{\n     E =  eval(parse(text = sprintf(\"p%s%s(seq.o, mu1, sigma1,mu2, sigma2)\", dist1, dist2)))\n   }\n\n   E = E * length(res)\n   E[2:length(seq.o)] = E[2:length(seq.o)] - E[1:(length(seq.o)-1)]\n   E = E[idx.O]\n\n   chi.stat = sum((O[E>0]-E[E>0])^2 / E[E>0])\n   df.chi = max(length(E[E>0])-4,1)\n   p.val.chi <- 1-pchisq(chi.stat,df = df.chi)\n\n   # G - testing\n\n   g.stat = sum( 2 * O * log(O / E))\n   p.val.g <- 1-pchisq(g.stat,df = df.chi)\n\n   # K-S\n\n   if(dist1 == \"Pois\"){\n     ks.stat =  eval(parse(text = sprintf(\"ks.test(res, p%s%s, mu1, mu2, sigma2)\", dist1, dist2)))\n   }else{\n     ks.stat =  eval(parse(text = sprintf(\"ks.test(res, p%s%s, mu1, sigma1,mu2, sigma2)\", dist1, dist2)))\n      }\n\n\n   test.df = data.frame(\"statistic\" = c(chi.stat, g.stat, ks.stat$statistic), \"df\" = c(df.chi, df.chi, NA), \"p-value\" = c(p.val.chi, p.val.g, ks.stat$p.value))\n\n   rownames(test.df) <- c(\"Chi-2 test\", \"G-test\", \"KS test\")\n\n   RET = list(df = test.df,E = E,O = O,x.O = x.o, dist1 = dist1, dist2 = dist2, ks.list = list(res,mu1,sigma1,mu2,sigma2))\n\n   class(RET) <- 'testdist'\n   return(RET)\n}\n",
+    "created" : 1484709102034.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3456653556",
+    "id" : "8F467E9B",
+    "lastKnownWriteTime" : 1484710288,
+    "last_content_update" : 1484710288947,
+    "path" : "~/Documents/Donnees/Code/Package/convReg/R/testdist.R",
+    "project_path" : "R/testdist.R",
+    "properties" : {
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
