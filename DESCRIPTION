@@ -5,15 +5,16 @@ Date: 2016-12-18
 Authors@R: person("Adrien", "Ickowicz", email = "adrien.ickowicz@csiro.au", role = c("aut", "cre"))
 Description: Estimation of convolutive mixture models.
 Depends:
-    R (>= 3.1.1), compiler, inline, lattice, nnet, pscl, data.table, COMPoissonReg,
-    RcppArmadillo, numDeriv, doMC, doParallel, foreach, parallel, MASS
-License: GPL-2
+    R (>= 3.1.1)
+Imports:
+    compiler, inline, lattice, nnet, pscl, data.table, COMPoissonReg, Rcpp (>= 0.11.1), RcppArmadillo, 
+    numDeriv, doMC, doParallel, foreach, parallel, MASS, Rdpack
+Suggests: knitr, rmarkdown, testthat
+LinkingTo: Rcpp
+VignetteBuilder: knitr
+RdMacros: Rdpack
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0
-Suggests: knitr,
-    rmarkdown,
-    testthat
-VignetteBuilder: knitr
-Imports: Rcpp (>= 0.11.1)
-LinkingTo: Rcpp
+License: MIT + file LICENSE
