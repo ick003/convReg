@@ -221,9 +221,10 @@ summary.convreg <- function(object,... ) {
   summary
 }
 
+#' @method print convreg
 #' @export
-print.convreg <- function(object, ...) {
-  obj = object
+print.convreg <- function(x, ...) {
+  obj = x
   cat("\nCall:\n")
   print(obj$call)
   cat("\nTheta_mu1:\n")
@@ -236,8 +237,10 @@ print.convreg <- function(object, ...) {
   invisible(obj)
 }
 
+#' @method print summary.convreg
 #' @export
-print.summary.convreg <- function(object, ... ) {
+print.summary.convreg <- function(x, ... ) {
+    object = x
   cat("--------------------------------------------\n")
   cat("Convolution Regression Results","\n")
   cat(toupper(object$maximType), ", ", object$distr,"\n", sep="")
@@ -342,6 +345,13 @@ quantRes <- function(obj, ...) {
    return(qres)
 }
 
+#' Reports total mean and total variance of convreg distribution
+#' @param mu1 value for mu1
+#' @param sigma1 value for sigma1
+#' @param mu2 value for mu2
+#' @param sigma2 value for sigma2
+#' @param dist1 choice of distribution 1
+#' @param dist2 choice of distribution 2
 #' @export
 meanVarianceConvreg <- function(mu1, sigma1,mu2, sigma2,dist1, dist2) {
 
@@ -467,8 +477,10 @@ marginalReg <- function(obj, name.reg,bp, ...) {
    return(list(values = data.frame(x = range.var,mu1= mu.1, s1=sigma.1, mu2=mu.2, s2=sigma.2), names = rownames(obj$estimation)[idx.var]))
 }
 
+#' @method print testdist
 #' @export
-print.testdist <- function(object, ...) {
+print.testdist <- function(x, ...) {
+    object = x
    cat("--------------------------------------------\n")
    cat("Convolution Regression Distribution Tests","\n")
    cat("Assumed distribution: ", object$dist1," and ",object$dist2,"\n", sep="")

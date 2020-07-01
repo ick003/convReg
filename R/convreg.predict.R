@@ -1,4 +1,5 @@
-predict.convreg <- function(obj, newdata=NULL,pred.type = "point", delta= 1, xlim=c(0,25), with.confidence.interval=FALSE){
+predict.convreg <- function(obj, newdata=NULL,pred.type = "point", delta= 1, xlim=c(0,25), 
+                            with.confidence.interval=FALSE){
    
    if(!(pred.type %in% c("point","hist", "contr2"))){stop("Not the right pred.type call")}
    

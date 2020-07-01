@@ -1,5 +1,12 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^\.travis\.yml$
+^appveyor\.yml$
+^codecov\.yml$
+^README\.Rmd$
+^README-.*\.png$
+^README\.html$
+docs/
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
